@@ -1,0 +1,29 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= link_to "Download", @article.attachment_url %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @article.user.email %>
+</p>
+
+<hr>
+<h2>Comments</h2>
+<%= comments_tree_for @comments %>
+<%# render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Back', articles_path %>

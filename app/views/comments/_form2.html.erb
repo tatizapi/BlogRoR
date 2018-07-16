@@ -1,0 +1,11 @@
+<%= form_for [@article, @comment] do |f| %>
+
+  <%= f.hidden_field :parent_id %>
+  
+  <div >
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
